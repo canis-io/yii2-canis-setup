@@ -1,0 +1,19 @@
+{
+	"name": "canis/yii2-canis-setup",
+	"description": "Setup library for Canis applications",
+	"keywords": ["yii", "libraries"],
+	"homepage": "http://canis.io",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.4.0",
+		"canis/cascade-lib": "*"
+	},
+	"extra": {
+		"asset-installer-paths": {
+			"npm-asset-library": "vendor/npm",
+			"bower-asset-library": "vendor/bower"
+		}
+	}
+}
