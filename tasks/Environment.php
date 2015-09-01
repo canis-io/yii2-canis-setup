@@ -54,6 +54,11 @@ class Environment extends BaseTask
         return strtr(substr(base64_encode($bytes), 0, $length), '+/=', '_-.');
     }
 
+    public function getExtraInput(&$input)
+    {
+        return;
+    }
+
     /**
      * @inheritdoc
      */
@@ -81,6 +86,7 @@ class Environment extends BaseTask
                 $input['redis']['port'] = CANIS_APP_REDIS_PORT;
                 $input['redis']['database'] = CANIS_APP_REDIS_DATABASE;
             }
+            $this->getExtraInput($input);
             $upgrade = true;
         }
 
