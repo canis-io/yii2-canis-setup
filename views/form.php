@@ -20,6 +20,11 @@ foreach ($fields as $fieldsetName => $fieldset) {
             } else {
                 $value = $settings['value'];
             }
+            if ($value === true) {
+                $value = 'true';
+            } elseif ($value === false) {
+                $value = 'false';
+            }
         }
         if (isset($_POST[$task->id][$fieldsetName][$fieldNameShort])) {
             $value = $_POST[$task->id][$fieldsetName][$fieldNameShort];

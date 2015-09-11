@@ -103,7 +103,6 @@ class Environment extends BaseTask
         if (empty($input['cookieValidationString'])) {
             $input['cookieValidationString'] = static::generateRandomString();
         }
-
         if (!$this->initEnv($input) || !file_exists($this->setup->environmentFilePath)) {
             $this->errors[] = 'Unable to set up environment (Env file: '. $this->setup->environmentFilePath .')';
             return false;
